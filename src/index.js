@@ -16,7 +16,7 @@ export default function(inComponent,inProps,inAttrs){
   component = render( h(inComponent,inProps) ,div);
 
   return {
-    component,
+    component: component._component,
     destroy:function(){
       component = null;
       body.removeChild(div);

@@ -20,7 +20,7 @@ exports.default = function (inComponent, inProps, inAttrs) {
   component = (0, _preact.render)((0, _preact.h)(inComponent, inProps), div);
 
   return {
-    component: component,
+    component: component._component,
     destroy: function destroy() {
       component = null;
       body.removeChild(div);
